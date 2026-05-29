@@ -11,7 +11,7 @@ path';import { defineConfig } from
 
 export 快速'；导出 default defineConfig(() => {
   return {
-    base: './', // 🌟 核心修复：改成相对路径，完美适配你的库名「-」
+    base: '/-/', // 🌟 核心修复：改成相对路径，完美适配你的库名「-」
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
