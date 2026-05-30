@@ -1,20 +1,23 @@
-import tailwindcss from  '@tailwindcss/vite';
-import react from
- '@tailwindcss/vite';
-import react from
- '@vitejs/plugin-react';
-import path from
-@vitejs/plugin-react';
-import path from
- 'path';
-import { defineConfig } from
- 'path';
-import { defineConfig } from
- 'vite';
+import tailwindcss fromimport tailwindcss from import tailwindcss from '@tailwindcss/vite';
+import react from'@tailwindcss/vite';
+import react from@tailwindcss/vite';import react from '@vitejs/plugin-react';
+import path from'@vitejs/plugin-react';
+import path from@vitejs/plugin-react';import path from 'path';
+import { defineConfig } from'path';
+import { defineConfig } frompath';import { defineConfig } from 'vite';
+import { fileURLToPath } from'vite';
+import { fileURLToPath } fromvite';import { fileURLToPath } from 'url';
+const __dirname = typeofconst __dirname = typeof const __dirname = typeof import.meta.dirname !== 'undefined' 
+  ? import.meta.dirname 
+  : path.dirname(fileURLToPath(import.meta.url));
 
-export 快速'；导出 default defineConfig(() => {
+exportimport.meta.dirname !== 'undefined' 
+  ? import.meta.dirname 
+  : path.dirname(fileURLToPath(import.meta.url));
+
+exportimport.meta.dirname !== 'undefined' ? import.meta.dirname : path.dirname(fileURLToPath(import.meta.url));export default defineConfig(() => {
   return {
-    base: '/-/', // 🌟 核心修复：改成相对路径，完美适配你的库名「-」
+    base: '/-/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
@@ -22,17 +25,24 @@ export 快速'；导出 default defineConfig(() => {
       },
     },
     server: {
-      // HMR is disabled in AI Studio via DISABLE_HMR env var.
-plugins: [react(), tailwindcss()],resolve: {alias: {'@': path.resolve(__dirname, '.'),},},server: {// AI Studio 中通过 DISABLE_HMR 环境变量禁用了热模块替换（HMR）。
-
-      // Do not modify. File watching is disabled to prevent flickering during agent edits.
-请勿修改。文件监视已被禁用，以防止在智能体编辑过程中出现闪烁。
-
       hmr: process.env.DISABLE_HMR !== 'true',
-      // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
-hmr: process.env.DISABLE_HMR !== 'true',// 当 DISABLE_HMR 为 true 时禁用文件监视，以在代理编辑期间节省 CPU 资源。
-
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
     },
   };
 });
+default defineConfig(() => {
+  return {
+    base: '/-/',
+    plugins: [react(), tailwindcss()],
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '.'),
+      },
+    },
+    server: {
+      hmr: process.env.DISABLE_HMR !== 'true',
+      watch: process.env.DISABLE_HMR === 'true' ? null : {},
+    },
+  };
+});
+默认导出 defineConfig 函数，该函数返回配置对象，包含基础路径为 `/-/`、插件数组（包含 react 和 tailwindcss 插件）、解析别名（将 `@` 映射到当前目录）、开发服务器配置（热模块替换根据环境变量开启，监听配置随热模块替换状态变化）。
